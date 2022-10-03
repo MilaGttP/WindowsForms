@@ -57,7 +57,6 @@
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(219, 23);
             this.dateTimePicker.TabIndex = 2;
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // LabForm
             // 
@@ -68,6 +67,7 @@
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.chooseDateButton);
             this.Name = "LabForm";
+            this.ShowInTaskbar = false;
             this.Text = "Choosing a date";
             this.ResumeLayout(false);
             this.PerformLayout();
