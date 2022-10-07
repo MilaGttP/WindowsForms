@@ -19,7 +19,7 @@ namespace WindowsForms
                     MessageBox.Show($"Queries quantity is {counter}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     counter = 0;
                     result = MessageBox.Show($"Do you want to continue?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes) this.Close();
+                    if (result == DialogResult.No) Application.Exit();
                 }
                 counter++;
             }
