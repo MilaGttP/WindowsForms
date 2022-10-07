@@ -1,6 +1,7 @@
 ﻿
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Reflection.Emit;
 
 namespace WindowsForms
 {
@@ -16,5 +17,13 @@ namespace WindowsForms
         }
 
         private void ExitButton_Click(object sender, EventArgs e) => Application.Exit();
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            int dateC; string DateC;
+            DateC = Convert.ToString(((dateTimePicker1.Value - dateTimePicker2.Value).Days));
+            if ((dateC = Convert.ToInt32(DateC)) > 0) ResLabel.Text = "Days between dates is " + DateC;
+            else ResLabel.Text = "Days between dates is " + Convert.ToString(Math.Abs(dateC) + 1);
+        }
     }
 }

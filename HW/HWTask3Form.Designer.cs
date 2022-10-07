@@ -31,9 +31,10 @@
             this.DateTB = new MaterialSkin.Controls.MaterialTextBox();
             this.MonthTB = new MaterialSkin.Controls.MaterialTextBox();
             this.YearTB = new MaterialSkin.Controls.MaterialTextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.OKButton = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // DateTB
@@ -90,17 +91,17 @@
             this.YearTB.Text = "";
             this.YearTB.TrailingIcon = null;
             // 
-            // monthCalendar1
+            // monthCalendar
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(164, 137);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 3;
+            this.monthCalendar.Location = new System.Drawing.Point(305, 127);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 3;
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.Location = new System.Drawing.Point(164, 68);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -112,7 +113,7 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.Location = new System.Drawing.Point(312, 68);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -120,14 +121,35 @@
             this.materialLabel2.TabIndex = 5;
             this.materialLabel2.Text = ".";
             // 
+            // OKButton
+            // 
+            this.OKButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.OKButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.OKButton.Depth = 0;
+            this.OKButton.HighEmphasis = true;
+            this.OKButton.Icon = null;
+            this.OKButton.Location = new System.Drawing.Point(127, 163);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.OKButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.OKButton.Name = "OKButton";
+            this.OKButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.OKButton.Size = new System.Drawing.Size(64, 36);
+            this.OKButton.TabIndex = 6;
+            this.OKButton.Text = "OK";
+            this.OKButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.OKButton.UseAccentColor = false;
+            this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            // 
             // HWTask3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 327);
+            this.ClientSize = new System.Drawing.Size(528, 327);
+            this.Controls.Add(this.OKButton);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.monthCalendar);
             this.Controls.Add(this.YearTB);
             this.Controls.Add(this.MonthTB);
             this.Controls.Add(this.DateTB);
@@ -143,8 +165,9 @@
         private MaterialSkin.Controls.MaterialTextBox DateTB;
         private MaterialSkin.Controls.MaterialTextBox MonthTB;
         private MaterialSkin.Controls.MaterialTextBox YearTB;
-        private MonthCalendar monthCalendar1;
+        private MonthCalendar monthCalendar;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton OKButton;
     }
 }
