@@ -12,11 +12,13 @@ namespace WindowsForms
         {
             HWTask1 task1 = new HWTask1();
             task1.ShowDialog();
+            this.DialogResult = DialogResult.Cancel;
         }
         private void Task2_Click(object sender, EventArgs e)
         {
-            HWTask2 task2 = new HWTask2();
+            PersonListForm task2 = new PersonListForm();
             task2.ShowDialog();
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }
