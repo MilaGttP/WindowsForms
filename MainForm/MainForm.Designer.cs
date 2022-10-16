@@ -58,6 +58,20 @@
             this.HWMainTab = new System.Windows.Forms.TabPage();
             this.HWTabControl = new System.Windows.Forms.TabControl();
             this.FirstHWTask = new System.Windows.Forms.TabPage();
+            this.FileTB = new System.Windows.Forms.RichTextBox();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.FileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.CutOutFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.CancelFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FontColorFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackColorFileTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.FontFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SecondHWTask = new System.Windows.Forms.TabPage();
             this.ThirdHWTask = new System.Windows.Forms.TabPage();
             this.MainTabControl.SuspendLayout();
@@ -71,6 +85,8 @@
             this.SizeTab.SuspendLayout();
             this.HWMainTab.SuspendLayout();
             this.HWTabControl.SuspendLayout();
+            this.FirstHWTask.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -430,9 +446,12 @@
             this.HWTabControl.SelectedIndex = 0;
             this.HWTabControl.Size = new System.Drawing.Size(836, 463);
             this.HWTabControl.TabIndex = 0;
+            this.HWTabControl.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexHWTabControl);
             // 
             // FirstHWTask
             // 
+            this.FirstHWTask.Controls.Add(this.FileTB);
+            this.FirstHWTask.Controls.Add(this.menuStrip);
             this.FirstHWTask.Location = new System.Drawing.Point(4, 24);
             this.FirstHWTask.Name = "FirstHWTask";
             this.FirstHWTask.Padding = new System.Windows.Forms.Padding(3);
@@ -440,6 +459,119 @@
             this.FirstHWTask.TabIndex = 0;
             this.FirstHWTask.Text = "Task 1";
             this.FirstHWTask.UseVisualStyleBackColor = true;
+            // 
+            // FileTB
+            // 
+            this.FileTB.Location = new System.Drawing.Point(6, 43);
+            this.FileTB.Name = "FileTB";
+            this.FileTB.Size = new System.Drawing.Size(816, 386);
+            this.FileTB.TabIndex = 1;
+            this.FileTB.Text = "";
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileTool,
+            this.settingsToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(822, 24);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
+            // 
+            // FileTool
+            // 
+            this.FileTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenFileTool,
+            this.SaveFileTool,
+            this.NewFileTool,
+            this.CopyFileTool,
+            this.CutOutFileTool,
+            this.PasteFileTool,
+            this.CancelFileTool});
+            this.FileTool.Name = "FileTool";
+            this.FileTool.Size = new System.Drawing.Size(37, 20);
+            this.FileTool.Text = "File";
+            // 
+            // OpenFileTool
+            // 
+            this.OpenFileTool.Name = "OpenFileTool";
+            this.OpenFileTool.Size = new System.Drawing.Size(114, 22);
+            this.OpenFileTool.Text = "Open";
+            this.OpenFileTool.Click += new System.EventHandler(this.OpenFileTool_Click);
+            // 
+            // SaveFileTool
+            // 
+            this.SaveFileTool.Name = "SaveFileTool";
+            this.SaveFileTool.Size = new System.Drawing.Size(114, 22);
+            this.SaveFileTool.Text = "Save";
+            this.SaveFileTool.Click += new System.EventHandler(this.SaveFileTool_Click);
+            // 
+            // NewFileTool
+            // 
+            this.NewFileTool.Name = "NewFileTool";
+            this.NewFileTool.Size = new System.Drawing.Size(114, 22);
+            this.NewFileTool.Text = "New";
+            this.NewFileTool.Click += new System.EventHandler(this.NewFileTool_Click);
+            // 
+            // CopyFileTool
+            // 
+            this.CopyFileTool.Name = "CopyFileTool";
+            this.CopyFileTool.Size = new System.Drawing.Size(114, 22);
+            this.CopyFileTool.Text = "Copy";
+            this.CopyFileTool.Click += new System.EventHandler(this.CopyFileTool_Click);
+            // 
+            // CutOutFileTool
+            // 
+            this.CutOutFileTool.Name = "CutOutFileTool";
+            this.CutOutFileTool.Size = new System.Drawing.Size(114, 22);
+            this.CutOutFileTool.Text = "Cut out";
+            this.CutOutFileTool.Click += new System.EventHandler(this.CutOutFileTool_Click);
+            // 
+            // PasteFileTool
+            // 
+            this.PasteFileTool.Name = "PasteFileTool";
+            this.PasteFileTool.Size = new System.Drawing.Size(114, 22);
+            this.PasteFileTool.Text = "Paste";
+            this.PasteFileTool.Click += new System.EventHandler(this.PasteFileTool_Click);
+            // 
+            // CancelFileTool
+            // 
+            this.CancelFileTool.Name = "CancelFileTool";
+            this.CancelFileTool.Size = new System.Drawing.Size(114, 22);
+            this.CancelFileTool.Text = "Cancel";
+            this.CancelFileTool.Click += new System.EventHandler(this.CancelFileTool_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FontColorFileTool,
+            this.BackColorFileTool,
+            this.FontFileTool});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // FontColorFileTool
+            // 
+            this.FontColorFileTool.Name = "FontColorFileTool";
+            this.FontColorFileTool.Size = new System.Drawing.Size(180, 22);
+            this.FontColorFileTool.Text = "Font color";
+            this.FontColorFileTool.Click += new System.EventHandler(this.FontColorFileTool_Click);
+            // 
+            // BackColorFileTool
+            // 
+            this.BackColorFileTool.Name = "BackColorFileTool";
+            this.BackColorFileTool.Size = new System.Drawing.Size(180, 22);
+            this.BackColorFileTool.Text = "Background color";
+            this.BackColorFileTool.Click += new System.EventHandler(this.BackColorFileTool_Click);
+            // 
+            // FontFileTool
+            // 
+            this.FontFileTool.Name = "FontFileTool";
+            this.FontFileTool.Size = new System.Drawing.Size(180, 22);
+            this.FontFileTool.Text = "Font";
+            this.FontFileTool.Click += new System.EventHandler(this.FontFileTool_Click);
             // 
             // SecondHWTask
             // 
@@ -466,6 +598,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 527);
             this.Controls.Add(this.MainTabControl);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.MainTabControl.ResumeLayout(false);
@@ -484,6 +617,10 @@
             this.SizeTab.PerformLayout();
             this.HWMainTab.ResumeLayout(false);
             this.HWTabControl.ResumeLayout(false);
+            this.FirstHWTask.ResumeLayout(false);
+            this.FirstHWTask.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +659,19 @@
         private ComboBox SizeFontCB;
         private Button ResetLab2TaskButton;
         private Button OKLab2TaskButton;
+        private MenuStrip menuStrip;
+        private ToolStripMenuItem FileTool;
+        private ToolStripMenuItem OpenFileTool;
+        private ToolStripMenuItem SaveFileTool;
+        private ToolStripMenuItem NewFileTool;
+        private ToolStripMenuItem CopyFileTool;
+        private ToolStripMenuItem CutOutFileTool;
+        private ToolStripMenuItem PasteFileTool;
+        private ToolStripMenuItem CancelFileTool;
+        private ToolStripMenuItem settingsToolStripMenuItem;
+        private ToolStripMenuItem FontColorFileTool;
+        private ToolStripMenuItem BackColorFileTool;
+        private ToolStripMenuItem FontFileTool;
+        private RichTextBox FileTB;
     }
 }
