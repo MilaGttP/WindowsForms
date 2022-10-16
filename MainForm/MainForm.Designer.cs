@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.LabMainTab = new System.Windows.Forms.TabPage();
             this.LabTabControl = new System.Windows.Forms.TabControl();
@@ -59,15 +60,17 @@
             this.HWTabControl = new System.Windows.Forms.TabControl();
             this.FirstHWTask = new System.Windows.Forms.TabPage();
             this.FileTB = new System.Windows.Forms.RichTextBox();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CopyContextTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.CutOutContextTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteContextTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.CancelContextTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.SelectAllContextTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.FileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.NewFileTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyFileTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.CutOutFileTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteFileTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.CancelFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FontColorFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.BackColorFileTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +89,8 @@
             this.HWMainTab.SuspendLayout();
             this.HWTabControl.SuspendLayout();
             this.FirstHWTask.SuspendLayout();
-            this.menuStrip.SuspendLayout();
+            this.contextMenu.SuspendLayout();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -451,7 +455,7 @@
             // FirstHWTask
             // 
             this.FirstHWTask.Controls.Add(this.FileTB);
-            this.FirstHWTask.Controls.Add(this.menuStrip);
+            this.FirstHWTask.Controls.Add(this.menu);
             this.FirstHWTask.Location = new System.Drawing.Point(4, 24);
             this.FirstHWTask.Name = "FirstHWTask";
             this.FirstHWTask.Padding = new System.Windows.Forms.Padding(3);
@@ -462,33 +466,76 @@
             // 
             // FileTB
             // 
+            this.FileTB.ContextMenuStrip = this.contextMenu;
             this.FileTB.Location = new System.Drawing.Point(6, 43);
             this.FileTB.Name = "FileTB";
             this.FileTB.Size = new System.Drawing.Size(816, 386);
             this.FileTB.TabIndex = 1;
             this.FileTB.Text = "";
             // 
-            // menuStrip
+            // contextMenu
             // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CopyContextTool,
+            this.CutOutContextTool,
+            this.PasteContextTool,
+            this.CancelContextTool,
+            this.SelectAllContextTool});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(181, 136);
+            // 
+            // CopyContextTool
+            // 
+            this.CopyContextTool.Name = "CopyContextTool";
+            this.CopyContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CopyContextTool.Text = "Copy";
+            this.CopyContextTool.Click += new System.EventHandler(this.CopyContextTool_Click);
+            // 
+            // CutOutContextTool
+            // 
+            this.CutOutContextTool.Name = "CutOutContextTool";
+            this.CutOutContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CutOutContextTool.Text = "Cut out";
+            this.CutOutContextTool.Click += new System.EventHandler(this.CutOutContextTool_Click);
+            // 
+            // PasteContextTool
+            // 
+            this.PasteContextTool.Name = "PasteContextTool";
+            this.PasteContextTool.Size = new System.Drawing.Size(180, 22);
+            this.PasteContextTool.Text = "Paste";
+            this.PasteContextTool.Click += new System.EventHandler(this.PasteContextTool_Click);
+            // 
+            // CancelContextTool
+            // 
+            this.CancelContextTool.Name = "CancelContextTool";
+            this.CancelContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CancelContextTool.Text = "Cancel";
+            this.CancelContextTool.Click += new System.EventHandler(this.CancelContextTool_Click);
+            // 
+            // SelectAllContextTool
+            // 
+            this.SelectAllContextTool.Name = "SelectAllContextTool";
+            this.SelectAllContextTool.Size = new System.Drawing.Size(180, 22);
+            this.SelectAllContextTool.Text = "Select all";
+            this.SelectAllContextTool.Click += new System.EventHandler(this.SelectAllContextTool_Click);
+            // 
+            // menu
+            // 
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileTool,
             this.settingsToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(822, 24);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip1";
+            this.menu.Location = new System.Drawing.Point(3, 3);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(822, 24);
+            this.menu.TabIndex = 0;
+            this.menu.Text = "menuStrip1";
             // 
             // FileTool
             // 
             this.FileTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenFileTool,
             this.SaveFileTool,
-            this.NewFileTool,
-            this.CopyFileTool,
-            this.CutOutFileTool,
-            this.PasteFileTool,
-            this.CancelFileTool});
+            this.NewFileTool});
             this.FileTool.Name = "FileTool";
             this.FileTool.Size = new System.Drawing.Size(37, 20);
             this.FileTool.Text = "File";
@@ -496,51 +543,23 @@
             // OpenFileTool
             // 
             this.OpenFileTool.Name = "OpenFileTool";
-            this.OpenFileTool.Size = new System.Drawing.Size(114, 22);
+            this.OpenFileTool.Size = new System.Drawing.Size(180, 22);
             this.OpenFileTool.Text = "Open";
             this.OpenFileTool.Click += new System.EventHandler(this.OpenFileTool_Click);
             // 
             // SaveFileTool
             // 
             this.SaveFileTool.Name = "SaveFileTool";
-            this.SaveFileTool.Size = new System.Drawing.Size(114, 22);
+            this.SaveFileTool.Size = new System.Drawing.Size(180, 22);
             this.SaveFileTool.Text = "Save";
             this.SaveFileTool.Click += new System.EventHandler(this.SaveFileTool_Click);
             // 
             // NewFileTool
             // 
             this.NewFileTool.Name = "NewFileTool";
-            this.NewFileTool.Size = new System.Drawing.Size(114, 22);
+            this.NewFileTool.Size = new System.Drawing.Size(180, 22);
             this.NewFileTool.Text = "New";
             this.NewFileTool.Click += new System.EventHandler(this.NewFileTool_Click);
-            // 
-            // CopyFileTool
-            // 
-            this.CopyFileTool.Name = "CopyFileTool";
-            this.CopyFileTool.Size = new System.Drawing.Size(114, 22);
-            this.CopyFileTool.Text = "Copy";
-            this.CopyFileTool.Click += new System.EventHandler(this.CopyFileTool_Click);
-            // 
-            // CutOutFileTool
-            // 
-            this.CutOutFileTool.Name = "CutOutFileTool";
-            this.CutOutFileTool.Size = new System.Drawing.Size(114, 22);
-            this.CutOutFileTool.Text = "Cut out";
-            this.CutOutFileTool.Click += new System.EventHandler(this.CutOutFileTool_Click);
-            // 
-            // PasteFileTool
-            // 
-            this.PasteFileTool.Name = "PasteFileTool";
-            this.PasteFileTool.Size = new System.Drawing.Size(114, 22);
-            this.PasteFileTool.Text = "Paste";
-            this.PasteFileTool.Click += new System.EventHandler(this.PasteFileTool_Click);
-            // 
-            // CancelFileTool
-            // 
-            this.CancelFileTool.Name = "CancelFileTool";
-            this.CancelFileTool.Size = new System.Drawing.Size(114, 22);
-            this.CancelFileTool.Text = "Cancel";
-            this.CancelFileTool.Click += new System.EventHandler(this.CancelFileTool_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -598,7 +617,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 527);
             this.Controls.Add(this.MainTabControl);
-            this.MainMenuStrip = this.menuStrip;
+            this.MainMenuStrip = this.menu;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.MainTabControl.ResumeLayout(false);
@@ -619,8 +638,9 @@
             this.HWTabControl.ResumeLayout(false);
             this.FirstHWTask.ResumeLayout(false);
             this.FirstHWTask.PerformLayout();
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
+            this.contextMenu.ResumeLayout(false);
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -659,19 +679,21 @@
         private ComboBox SizeFontCB;
         private Button ResetLab2TaskButton;
         private Button OKLab2TaskButton;
-        private MenuStrip menuStrip;
+        private MenuStrip menu;
         private ToolStripMenuItem FileTool;
         private ToolStripMenuItem OpenFileTool;
         private ToolStripMenuItem SaveFileTool;
         private ToolStripMenuItem NewFileTool;
-        private ToolStripMenuItem CopyFileTool;
-        private ToolStripMenuItem CutOutFileTool;
-        private ToolStripMenuItem PasteFileTool;
-        private ToolStripMenuItem CancelFileTool;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem FontColorFileTool;
         private ToolStripMenuItem BackColorFileTool;
         private ToolStripMenuItem FontFileTool;
         private RichTextBox FileTB;
+        private ContextMenuStrip contextMenu;
+        private ToolStripMenuItem CopyContextTool;
+        private ToolStripMenuItem CutOutContextTool;
+        private ToolStripMenuItem PasteContextTool;
+        private ToolStripMenuItem CancelContextTool;
+        private ToolStripMenuItem SelectAllContextTool;
     }
 }
