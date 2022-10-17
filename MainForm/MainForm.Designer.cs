@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Des#region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.LabMainTab = new System.Windows.Forms.TabPage();
             this.LabTabControl = new System.Windows.Forms.TabControl();
@@ -60,13 +61,13 @@
             this.HWTabControl = new System.Windows.Forms.TabControl();
             this.FirstHWTask = new System.Windows.Forms.TabPage();
             this.FileTB = new System.Windows.Forms.RichTextBox();
-            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuForTextEditor = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CopyContextTool = new System.Windows.Forms.ToolStripMenuItem();
             this.CutOutContextTool = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteContextTool = new System.Windows.Forms.ToolStripMenuItem();
             this.CancelContextTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SelectAllContextTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu = new System.Windows.Forms.MenuStrip();
+            this.menuForTextEditor = new System.Windows.Forms.MenuStrip();
             this.FileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveFileTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +77,22 @@
             this.BackColorFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.FontFileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SecondHWTask = new System.Windows.Forms.TabPage();
+            this.toolStripForExplorer = new System.Windows.Forms.ToolStrip();
+            this.DrivesLabelForExp = new System.Windows.Forms.ToolStripLabel();
+            this.DirsLabelForExp = new System.Windows.Forms.ToolStripLabel();
+            this.DirsLB = new System.Windows.Forms.ListBox();
+            this.DrivesLB = new System.Windows.Forms.ListBox();
+            this.menuForExplorer = new System.Windows.Forms.MenuStrip();
+            this.BackToolExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainToolExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenToolForExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackToolStripForExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchIcon = new System.Windows.Forms.ToolStripMenuItem();
+            this.PathTB = new System.Windows.Forms.ToolStripTextBox();
             this.ThirdHWTask = new System.Windows.Forms.TabPage();
+            this.contextMenuForExplorer = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OpenContextForExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackContextForExp = new System.Windows.Forms.ToolStripMenuItem();
             this.MainTabControl.SuspendLayout();
             this.LabMainTab.SuspendLayout();
             this.LabTabControl.SuspendLayout();
@@ -89,8 +105,12 @@
             this.HWMainTab.SuspendLayout();
             this.HWTabControl.SuspendLayout();
             this.FirstHWTask.SuspendLayout();
-            this.contextMenu.SuspendLayout();
-            this.menu.SuspendLayout();
+            this.contextMenuForTextEditor.SuspendLayout();
+            this.menuForTextEditor.SuspendLayout();
+            this.SecondHWTask.SuspendLayout();
+            this.toolStripForExplorer.SuspendLayout();
+            this.menuForExplorer.SuspendLayout();
+            this.contextMenuForExplorer.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -100,7 +120,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(12, 12);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(856, 503);
+            this.MainTabControl.Size = new System.Drawing.Size(884, 532);
             this.MainTabControl.TabIndex = 0;
             // 
             // LabMainTab
@@ -109,7 +129,7 @@
             this.LabMainTab.Location = new System.Drawing.Point(4, 24);
             this.LabMainTab.Name = "LabMainTab";
             this.LabMainTab.Padding = new System.Windows.Forms.Padding(3);
-            this.LabMainTab.Size = new System.Drawing.Size(848, 475);
+            this.LabMainTab.Size = new System.Drawing.Size(876, 504);
             this.LabMainTab.TabIndex = 0;
             this.LabMainTab.Text = "Laboratory Work";
             this.LabMainTab.UseVisualStyleBackColor = true;
@@ -435,7 +455,7 @@
             this.HWMainTab.Location = new System.Drawing.Point(4, 24);
             this.HWMainTab.Name = "HWMainTab";
             this.HWMainTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HWMainTab.Size = new System.Drawing.Size(848, 475);
+            this.HWMainTab.Size = new System.Drawing.Size(876, 504);
             this.HWMainTab.TabIndex = 1;
             this.HWMainTab.Text = "Home Work";
             this.HWMainTab.UseVisualStyleBackColor = true;
@@ -448,87 +468,87 @@
             this.HWTabControl.Location = new System.Drawing.Point(6, 6);
             this.HWTabControl.Name = "HWTabControl";
             this.HWTabControl.SelectedIndex = 0;
-            this.HWTabControl.Size = new System.Drawing.Size(836, 463);
+            this.HWTabControl.Size = new System.Drawing.Size(864, 492);
             this.HWTabControl.TabIndex = 0;
             this.HWTabControl.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexHWTabControl);
             // 
             // FirstHWTask
             // 
             this.FirstHWTask.Controls.Add(this.FileTB);
-            this.FirstHWTask.Controls.Add(this.menu);
+            this.FirstHWTask.Controls.Add(this.menuForTextEditor);
             this.FirstHWTask.Location = new System.Drawing.Point(4, 24);
             this.FirstHWTask.Name = "FirstHWTask";
             this.FirstHWTask.Padding = new System.Windows.Forms.Padding(3);
-            this.FirstHWTask.Size = new System.Drawing.Size(828, 435);
+            this.FirstHWTask.Size = new System.Drawing.Size(856, 464);
             this.FirstHWTask.TabIndex = 0;
             this.FirstHWTask.Text = "Task 1";
             this.FirstHWTask.UseVisualStyleBackColor = true;
             // 
             // FileTB
             // 
-            this.FileTB.ContextMenuStrip = this.contextMenu;
+            this.FileTB.ContextMenuStrip = this.contextMenuForTextEditor;
             this.FileTB.Location = new System.Drawing.Point(6, 43);
             this.FileTB.Name = "FileTB";
             this.FileTB.Size = new System.Drawing.Size(816, 386);
             this.FileTB.TabIndex = 1;
             this.FileTB.Text = "";
             // 
-            // contextMenu
+            // contextMenuForTextEditor
             // 
-            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuForTextEditor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CopyContextTool,
             this.CutOutContextTool,
             this.PasteContextTool,
             this.CancelContextTool,
             this.SelectAllContextTool});
-            this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuForTextEditor.Name = "contextMenu";
+            this.contextMenuForTextEditor.Size = new System.Drawing.Size(121, 114);
             // 
             // CopyContextTool
             // 
             this.CopyContextTool.Name = "CopyContextTool";
-            this.CopyContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CopyContextTool.Size = new System.Drawing.Size(120, 22);
             this.CopyContextTool.Text = "Copy";
             this.CopyContextTool.Click += new System.EventHandler(this.CopyContextTool_Click);
             // 
             // CutOutContextTool
             // 
             this.CutOutContextTool.Name = "CutOutContextTool";
-            this.CutOutContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CutOutContextTool.Size = new System.Drawing.Size(120, 22);
             this.CutOutContextTool.Text = "Cut out";
             this.CutOutContextTool.Click += new System.EventHandler(this.CutOutContextTool_Click);
             // 
             // PasteContextTool
             // 
             this.PasteContextTool.Name = "PasteContextTool";
-            this.PasteContextTool.Size = new System.Drawing.Size(180, 22);
+            this.PasteContextTool.Size = new System.Drawing.Size(120, 22);
             this.PasteContextTool.Text = "Paste";
             this.PasteContextTool.Click += new System.EventHandler(this.PasteContextTool_Click);
             // 
             // CancelContextTool
             // 
             this.CancelContextTool.Name = "CancelContextTool";
-            this.CancelContextTool.Size = new System.Drawing.Size(180, 22);
+            this.CancelContextTool.Size = new System.Drawing.Size(120, 22);
             this.CancelContextTool.Text = "Cancel";
             this.CancelContextTool.Click += new System.EventHandler(this.CancelContextTool_Click);
             // 
             // SelectAllContextTool
             // 
             this.SelectAllContextTool.Name = "SelectAllContextTool";
-            this.SelectAllContextTool.Size = new System.Drawing.Size(180, 22);
+            this.SelectAllContextTool.Size = new System.Drawing.Size(120, 22);
             this.SelectAllContextTool.Text = "Select all";
             this.SelectAllContextTool.Click += new System.EventHandler(this.SelectAllContextTool_Click);
             // 
-            // menu
+            // menuForTextEditor
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuForTextEditor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileTool,
             this.settingsToolStripMenuItem});
-            this.menu.Location = new System.Drawing.Point(3, 3);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(822, 24);
-            this.menu.TabIndex = 0;
-            this.menu.Text = "menuStrip1";
+            this.menuForTextEditor.Location = new System.Drawing.Point(3, 3);
+            this.menuForTextEditor.Name = "menuForTextEditor";
+            this.menuForTextEditor.Size = new System.Drawing.Size(850, 24);
+            this.menuForTextEditor.TabIndex = 0;
+            this.menuForTextEditor.Text = "menuStrip1";
             // 
             // FileTool
             // 
@@ -543,21 +563,21 @@
             // OpenFileTool
             // 
             this.OpenFileTool.Name = "OpenFileTool";
-            this.OpenFileTool.Size = new System.Drawing.Size(180, 22);
+            this.OpenFileTool.Size = new System.Drawing.Size(103, 22);
             this.OpenFileTool.Text = "Open";
             this.OpenFileTool.Click += new System.EventHandler(this.OpenFileTool_Click);
             // 
             // SaveFileTool
             // 
             this.SaveFileTool.Name = "SaveFileTool";
-            this.SaveFileTool.Size = new System.Drawing.Size(180, 22);
+            this.SaveFileTool.Size = new System.Drawing.Size(103, 22);
             this.SaveFileTool.Text = "Save";
             this.SaveFileTool.Click += new System.EventHandler(this.SaveFileTool_Click);
             // 
             // NewFileTool
             // 
             this.NewFileTool.Name = "NewFileTool";
-            this.NewFileTool.Size = new System.Drawing.Size(180, 22);
+            this.NewFileTool.Size = new System.Drawing.Size(103, 22);
             this.NewFileTool.Text = "New";
             this.NewFileTool.Click += new System.EventHandler(this.NewFileTool_Click);
             // 
@@ -574,50 +594,179 @@
             // FontColorFileTool
             // 
             this.FontColorFileTool.Name = "FontColorFileTool";
-            this.FontColorFileTool.Size = new System.Drawing.Size(180, 22);
+            this.FontColorFileTool.Size = new System.Drawing.Size(168, 22);
             this.FontColorFileTool.Text = "Font color";
             this.FontColorFileTool.Click += new System.EventHandler(this.FontColorFileTool_Click);
             // 
             // BackColorFileTool
             // 
             this.BackColorFileTool.Name = "BackColorFileTool";
-            this.BackColorFileTool.Size = new System.Drawing.Size(180, 22);
+            this.BackColorFileTool.Size = new System.Drawing.Size(168, 22);
             this.BackColorFileTool.Text = "Background color";
             this.BackColorFileTool.Click += new System.EventHandler(this.BackColorFileTool_Click);
             // 
             // FontFileTool
             // 
             this.FontFileTool.Name = "FontFileTool";
-            this.FontFileTool.Size = new System.Drawing.Size(180, 22);
+            this.FontFileTool.Size = new System.Drawing.Size(168, 22);
             this.FontFileTool.Text = "Font";
             this.FontFileTool.Click += new System.EventHandler(this.FontFileTool_Click);
             // 
             // SecondHWTask
             // 
+            this.SecondHWTask.Controls.Add(this.toolStripForExplorer);
+            this.SecondHWTask.Controls.Add(this.DirsLB);
+            this.SecondHWTask.Controls.Add(this.DrivesLB);
+            this.SecondHWTask.Controls.Add(this.menuForExplorer);
             this.SecondHWTask.Location = new System.Drawing.Point(4, 24);
             this.SecondHWTask.Name = "SecondHWTask";
             this.SecondHWTask.Padding = new System.Windows.Forms.Padding(3);
-            this.SecondHWTask.Size = new System.Drawing.Size(828, 435);
+            this.SecondHWTask.Size = new System.Drawing.Size(856, 464);
             this.SecondHWTask.TabIndex = 1;
             this.SecondHWTask.Text = "Task 2";
             this.SecondHWTask.UseVisualStyleBackColor = true;
+            // 
+            // toolStripForExplorer
+            // 
+            this.toolStripForExplorer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStripForExplorer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DrivesLabelForExp,
+            this.DirsLabelForExp});
+            this.toolStripForExplorer.Location = new System.Drawing.Point(3, 436);
+            this.toolStripForExplorer.Name = "toolStripForExplorer";
+            this.toolStripForExplorer.Size = new System.Drawing.Size(850, 25);
+            this.toolStripForExplorer.TabIndex = 3;
+            this.toolStripForExplorer.Text = "toolStrip1";
+            // 
+            // DrivesLabelForExp
+            // 
+            this.DrivesLabelForExp.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            this.DrivesLabelForExp.Name = "DrivesLabelForExp";
+            this.DrivesLabelForExp.Size = new System.Drawing.Size(67, 22);
+            this.DrivesLabelForExp.Text = "Elements: 0";
+            // 
+            // DirsLabelForExp
+            // 
+            this.DirsLabelForExp.Margin = new System.Windows.Forms.Padding(220, 1, 0, 2);
+            this.DirsLabelForExp.Name = "DirsLabelForExp";
+            this.DirsLabelForExp.Size = new System.Drawing.Size(67, 22);
+            this.DirsLabelForExp.Text = "Elements: 0";
+            // 
+            // DirsLB
+            // 
+            this.DirsLB.FormattingEnabled = true;
+            this.DirsLB.ItemHeight = 15;
+            this.DirsLB.Location = new System.Drawing.Point(298, 46);
+            this.DirsLB.Name = "DirsLB";
+            this.DirsLB.Size = new System.Drawing.Size(534, 379);
+            this.DirsLB.TabIndex = 2;
+            this.DirsLB.Click += new System.EventHandler(this.DirsLB_Click);
+            // 
+            // DrivesLB
+            // 
+            this.DrivesLB.FormattingEnabled = true;
+            this.DrivesLB.ItemHeight = 15;
+            this.DrivesLB.Location = new System.Drawing.Point(15, 46);
+            this.DrivesLB.Name = "DrivesLB";
+            this.DrivesLB.Size = new System.Drawing.Size(262, 379);
+            this.DrivesLB.TabIndex = 1;
+            this.DrivesLB.Click += new System.EventHandler(this.DrivesLB_Click);
+            this.DrivesLB.DoubleClick += new System.EventHandler(this.DrivesLB_DoubleClick);
+            // 
+            // menuForExplorer
+            // 
+            this.menuForExplorer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackToolExp,
+            this.MainToolExp,
+            this.SearchIcon,
+            this.PathTB});
+            this.menuForExplorer.Location = new System.Drawing.Point(3, 3);
+            this.menuForExplorer.Name = "menuForExplorer";
+            this.menuForExplorer.Size = new System.Drawing.Size(850, 27);
+            this.menuForExplorer.TabIndex = 0;
+            this.menuForExplorer.Text = "menuStrip1";
+            // 
+            // BackToolExp
+            // 
+            this.BackToolExp.Image = ((System.Drawing.Image)(resources.GetObject("BackToolExp.Image")));
+            this.BackToolExp.Name = "BackToolExp";
+            this.BackToolExp.Size = new System.Drawing.Size(28, 23);
+            this.BackToolExp.Click += new System.EventHandler(this.BackToolExp_Click);
+            // 
+            // MainToolExp
+            // 
+            this.MainToolExp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenToolForExp,
+            this.BackToolStripForExp});
+            this.MainToolExp.Name = "MainToolExp";
+            this.MainToolExp.Size = new System.Drawing.Size(46, 23);
+            this.MainToolExp.Text = "Main";
+            // 
+            // OpenToolForExp
+            // 
+            this.OpenToolForExp.Name = "OpenToolForExp";
+            this.OpenToolForExp.Size = new System.Drawing.Size(103, 22);
+            this.OpenToolForExp.Text = "Open";
+            this.OpenToolForExp.Click += new System.EventHandler(this.OpenToolForExp_Click);
+            // 
+            // BackToolStripForExp
+            // 
+            this.BackToolStripForExp.Name = "BackToolStripForExp";
+            this.BackToolStripForExp.Size = new System.Drawing.Size(103, 22);
+            this.BackToolStripForExp.Text = "Back";
+            // 
+            // SearchIcon
+            // 
+            this.SearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("SearchIcon.Image")));
+            this.SearchIcon.Margin = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.SearchIcon.Name = "SearchIcon";
+            this.SearchIcon.Size = new System.Drawing.Size(28, 23);
+            // 
+            // PathTB
+            // 
+            this.PathTB.Margin = new System.Windows.Forms.Padding(5, 0, 1, 0);
+            this.PathTB.Name = "PathTB";
+            this.PathTB.Size = new System.Drawing.Size(612, 23);
             // 
             // ThirdHWTask
             // 
             this.ThirdHWTask.Location = new System.Drawing.Point(4, 24);
             this.ThirdHWTask.Name = "ThirdHWTask";
-            this.ThirdHWTask.Size = new System.Drawing.Size(828, 435);
+            this.ThirdHWTask.Size = new System.Drawing.Size(856, 464);
             this.ThirdHWTask.TabIndex = 2;
             this.ThirdHWTask.Text = "Task 3";
             this.ThirdHWTask.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuForExplorer
+            // 
+            this.contextMenuForExplorer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenContextForExp,
+            this.BackContextForExp});
+            this.contextMenuForExplorer.Name = "contextMenuForExplorer";
+            this.contextMenuForExplorer.Size = new System.Drawing.Size(181, 70);
+            // 
+            // OpenContextForExp
+            // 
+            this.OpenContextForExp.Name = "OpenContextForExp";
+            this.OpenContextForExp.Size = new System.Drawing.Size(180, 22);
+            this.OpenContextForExp.Tag = "";
+            this.OpenContextForExp.Text = "Open";
+            this.OpenContextForExp.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            // 
+            // BackContextForExp
+            // 
+            this.BackContextForExp.Name = "BackContextForExp";
+            this.BackContextForExp.Size = new System.Drawing.Size(180, 22);
+            this.BackContextForExp.Text = "Back";
+            this.BackContextForExp.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 527);
+            this.ClientSize = new System.Drawing.Size(908, 556);
             this.Controls.Add(this.MainTabControl);
-            this.MainMenuStrip = this.menu;
+            this.MainMenuStrip = this.menuForTextEditor;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.MainTabControl.ResumeLayout(false);
@@ -638,9 +787,16 @@
             this.HWTabControl.ResumeLayout(false);
             this.FirstHWTask.ResumeLayout(false);
             this.FirstHWTask.PerformLayout();
-            this.contextMenu.ResumeLayout(false);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
+            this.contextMenuForTextEditor.ResumeLayout(false);
+            this.menuForTextEditor.ResumeLayout(false);
+            this.menuForTextEditor.PerformLayout();
+            this.SecondHWTask.ResumeLayout(false);
+            this.SecondHWTask.PerformLayout();
+            this.toolStripForExplorer.ResumeLayout(false);
+            this.toolStripForExplorer.PerformLayout();
+            this.menuForExplorer.ResumeLayout(false);
+            this.menuForExplorer.PerformLayout();
+            this.contextMenuForExplorer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -679,7 +835,7 @@
         private ComboBox SizeFontCB;
         private Button ResetLab2TaskButton;
         private Button OKLab2TaskButton;
-        private MenuStrip menu;
+        private MenuStrip menuForTextEditor;
         private ToolStripMenuItem FileTool;
         private ToolStripMenuItem OpenFileTool;
         private ToolStripMenuItem SaveFileTool;
@@ -689,11 +845,26 @@
         private ToolStripMenuItem BackColorFileTool;
         private ToolStripMenuItem FontFileTool;
         private RichTextBox FileTB;
-        private ContextMenuStrip contextMenu;
+        private ContextMenuStrip contextMenuForTextEditor;
         private ToolStripMenuItem CopyContextTool;
         private ToolStripMenuItem CutOutContextTool;
         private ToolStripMenuItem PasteContextTool;
         private ToolStripMenuItem CancelContextTool;
         private ToolStripMenuItem SelectAllContextTool;
+        private MenuStrip menuForExplorer;
+        private ContextMenuStrip contextMenuForExplorer;
+        private ToolStripMenuItem BackToolExp;
+        private ToolStripMenuItem MainToolExp;
+        private ToolStripTextBox PathTB;
+        private ListBox DirsLB;
+        private ListBox DrivesLB;
+        private ToolStrip toolStripForExplorer;
+        private ToolStripLabel DrivesLabelForExp;
+        private ToolStripLabel DirsLabelForExp;
+        private ToolStripMenuItem SearchIcon;
+        private ToolStripMenuItem OpenToolForExp;
+        private ToolStripMenuItem BackToolStripForExp;
+        private ToolStripMenuItem OpenContextForExp;
+        private ToolStripMenuItem BackContextForExp;
     }
 }

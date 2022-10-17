@@ -7,6 +7,7 @@ namespace WindowsForms
 {
     public partial class MainForm : Form
     {
+        private string pathForEditor;
         private void OpenFileTool_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -15,14 +16,14 @@ namespace WindowsForms
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 FileTB.ReadOnly = false;
-                contextMenu.Enabled = true;
+                contextMenuForTextEditor.Enabled = true;
                 SaveFileTool.Enabled = true;
                 CutOutContextTool.Enabled = true;
                 CopyContextTool.Enabled = true;
                 CancelContextTool.Enabled = true;
                 SelectAllContextTool.Enabled = true;
-                path = dialog.FileName;
-                Text = $"Текстовый редактор - {path}";
+                pathForEditor = dialog.FileName;
+                Text = $"Текстовый редактор - {pathForEditor}";
                 StreamReader reading = new StreamReader(dialog.FileName, Encoding.Default);
                 FileTB.Text = reading.ReadToEnd();
                 reading.Close();
@@ -30,9 +31,9 @@ namespace WindowsForms
         }
         private void SaveFileTool_Click(object sender, EventArgs e)
         {
-            if (path != "")
+            if (pathForEditor != "")
             {
-                StreamWriter writing = new StreamWriter(path, false, Encoding.Default);
+                StreamWriter writing = new StreamWriter(pathForEditor, false, Encoding.Default);
                 writing.Write(FileTB.Text);
                 writing.Close();
             }
@@ -46,15 +47,15 @@ namespace WindowsForms
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 FileTB.ReadOnly = false;
-                contextMenu.Enabled = true;
+                contextMenuForTextEditor.Enabled = true;
                 SaveFileTool.Enabled = true;
                 CutOutContextTool.Enabled = true;
                 CopyContextTool.Enabled = true;
                 CancelContextTool.Enabled = true;
                 SelectAllContextTool.Enabled = true;
-                path = dialog.FileName;
-                Text = $"Text editor - {path}";
-                StreamWriter writing = new StreamWriter(path, false, Encoding.Default);
+                pathForEditor = dialog.FileName;
+                Text = $"Text editor - {pathForEditor}";
+                StreamWriter writing = new StreamWriter(pathForEditor, false, Encoding.Default);
                 writing.Write(FileTB.Text);
                 writing.Close();
             }
