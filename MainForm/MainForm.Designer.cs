@@ -90,9 +90,14 @@
             this.SearchIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.PathTB = new System.Windows.Forms.ToolStripTextBox();
             this.ThirdHWTask = new System.Windows.Forms.TabPage();
+            this.AddSubMenuItem = new System.Windows.Forms.Button();
+            this.AddMenuItem = new System.Windows.Forms.Button();
+            this.SubItem = new System.Windows.Forms.TextBox();
+            this.TopLevelMenu = new System.Windows.Forms.TextBox();
             this.contextMenuForExplorer = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OpenContextForExp = new System.Windows.Forms.ToolStripMenuItem();
             this.BackContextForExp = new System.Windows.Forms.ToolStripMenuItem();
+            this.TopMenu = new System.Windows.Forms.MenuStrip();
             this.MainTabControl.SuspendLayout();
             this.LabMainTab.SuspendLayout();
             this.LabTabControl.SuspendLayout();
@@ -110,6 +115,7 @@
             this.SecondHWTask.SuspendLayout();
             this.toolStripForExplorer.SuspendLayout();
             this.menuForExplorer.SuspendLayout();
+            this.ThirdHWTask.SuspendLayout();
             this.contextMenuForExplorer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -730,6 +736,11 @@
             // 
             // ThirdHWTask
             // 
+            this.ThirdHWTask.Controls.Add(this.AddSubMenuItem);
+            this.ThirdHWTask.Controls.Add(this.AddMenuItem);
+            this.ThirdHWTask.Controls.Add(this.SubItem);
+            this.ThirdHWTask.Controls.Add(this.TopLevelMenu);
+            this.ThirdHWTask.Controls.Add(this.TopMenu);
             this.ThirdHWTask.Location = new System.Drawing.Point(4, 24);
             this.ThirdHWTask.Name = "ThirdHWTask";
             this.ThirdHWTask.Size = new System.Drawing.Size(856, 464);
@@ -737,28 +748,69 @@
             this.ThirdHWTask.Text = "Task 3";
             this.ThirdHWTask.UseVisualStyleBackColor = true;
             // 
+            // AddSubMenuItem
+            // 
+            this.AddSubMenuItem.Location = new System.Drawing.Point(411, 228);
+            this.AddSubMenuItem.Name = "AddSubMenuItem";
+            this.AddSubMenuItem.Size = new System.Drawing.Size(145, 35);
+            this.AddSubMenuItem.TabIndex = 3;
+            this.AddSubMenuItem.Text = "Add a submenu item";
+            this.AddSubMenuItem.UseVisualStyleBackColor = true;
+            this.AddSubMenuItem.Click += new System.EventHandler(this.AddSubMenuItem_Click);
+            // 
+            // AddMenuItem
+            // 
+            this.AddMenuItem.Location = new System.Drawing.Point(411, 140);
+            this.AddMenuItem.Name = "AddMenuItem";
+            this.AddMenuItem.Size = new System.Drawing.Size(145, 36);
+            this.AddMenuItem.TabIndex = 2;
+            this.AddMenuItem.Text = "Add a menu item";
+            this.AddMenuItem.UseVisualStyleBackColor = true;
+            this.AddMenuItem.Click += new System.EventHandler(this.AddMenuItem_Click);
+            // 
+            // SubItem
+            // 
+            this.SubItem.Location = new System.Drawing.Point(71, 235);
+            this.SubItem.Name = "SubItem";
+            this.SubItem.Size = new System.Drawing.Size(286, 23);
+            this.SubItem.TabIndex = 1;
+            // 
+            // TopLevelMenu
+            // 
+            this.TopLevelMenu.Location = new System.Drawing.Point(71, 148);
+            this.TopLevelMenu.Name = "TopLevelMenu";
+            this.TopLevelMenu.Size = new System.Drawing.Size(286, 23);
+            this.TopLevelMenu.TabIndex = 0;
+            // 
             // contextMenuForExplorer
             // 
             this.contextMenuForExplorer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenContextForExp,
             this.BackContextForExp});
             this.contextMenuForExplorer.Name = "contextMenuForExplorer";
-            this.contextMenuForExplorer.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuForExplorer.Size = new System.Drawing.Size(147, 48);
             // 
             // OpenContextForExp
             // 
             this.OpenContextForExp.Name = "OpenContextForExp";
-            this.OpenContextForExp.Size = new System.Drawing.Size(180, 22);
+            this.OpenContextForExp.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.OpenContextForExp.Size = new System.Drawing.Size(146, 22);
             this.OpenContextForExp.Tag = "";
             this.OpenContextForExp.Text = "Open";
-            this.OpenContextForExp.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             // 
             // BackContextForExp
             // 
             this.BackContextForExp.Name = "BackContextForExp";
-            this.BackContextForExp.Size = new System.Drawing.Size(180, 22);
-            this.BackContextForExp.Text = "Back";
             this.BackContextForExp.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.BackContextForExp.Size = new System.Drawing.Size(146, 22);
+            this.BackContextForExp.Text = "Back";
+            // 
+            // TopMenu
+            // 
+            this.TopMenu.Location = new System.Drawing.Point(0, 0);
+            this.TopMenu.Name = "TopMenu";
+            this.TopMenu.Size = new System.Drawing.Size(856, 24);
+            this.TopMenu.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -796,6 +848,8 @@
             this.toolStripForExplorer.PerformLayout();
             this.menuForExplorer.ResumeLayout(false);
             this.menuForExplorer.PerformLayout();
+            this.ThirdHWTask.ResumeLayout(false);
+            this.ThirdHWTask.PerformLayout();
             this.contextMenuForExplorer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -866,5 +920,10 @@
         private ToolStripMenuItem BackToolStripForExp;
         private ToolStripMenuItem OpenContextForExp;
         private ToolStripMenuItem BackContextForExp;
+        private Button AddSubMenuItem;
+        private Button AddMenuItem;
+        private TextBox SubItem;
+        private TextBox TopLevelMenu;
+        private MenuStrip TopMenu;
     }
 }

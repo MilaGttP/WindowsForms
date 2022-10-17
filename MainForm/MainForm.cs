@@ -20,7 +20,7 @@ namespace WindowsForms
                 BackToolStripForExp.Click += BackToolExp_Click;
                 OpenContextForExp.Click += OpenToolForExp_Click;
                 BackContextForExp.Click += BackToolExp_Click;
-            }
+            }     
         }
     }
 }
