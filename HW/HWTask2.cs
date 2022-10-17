@@ -31,9 +31,9 @@ namespace WindowsForms
             label.ForeColor = Color.White;
             label.BackColor = Color.CadetBlue;
             Controls.Add(label);
-            LableCenter(label);
+            LabelCenter(label);
         }
-        void LableCenter(Label lable)
+        void LabelCenter(Label lable)
         {
             label.Left = (ClientSize.Width - label.Size.Width) / 2;
             label.Top = (ClientSize.Height - label.Size.Height) / 2;
@@ -60,7 +60,7 @@ namespace WindowsForms
 
                 if ((label.Location.X < 0 || label.Location.X > ClientSize.Width - label.Width) 
                     || (label.Location.Y < 0 || label.Location.Y > ClientSize.Height - label.Height))
-                    LableCenter(label);
+                    LabelCenter(label);
             }
         }
     }
