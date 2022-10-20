@@ -15,7 +15,6 @@ namespace WindowsForms
         public MainForm()
         {
             InitializeComponent();
-            
         }
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -25,15 +24,8 @@ namespace WindowsForms
             }
             else if (MainTabControl.SelectedIndex == 1)
             {
-
-            }
-            else if (MainTabControl.SelectedIndex == 2)
-            {
-
-            }
-            else if (MainTabControl.SelectedIndex == 3)
-            {
-
+                RichTB.AllowDrop = true;
+                DirectoryTreeNode();
             }
         }
     }
