@@ -13,7 +13,7 @@ namespace WindowsForms
         {
             Group = "Unknown";
             FullName = "Unknown";
-            Birthday = new DateOnly(0, 0, 0);
+            Birthday = new DateOnly(0001, 1, 1);
             Height = "Unknown";
             Weight = "Unknown";
         }

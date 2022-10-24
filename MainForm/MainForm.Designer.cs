@@ -30,17 +30,17 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.Task1 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.WorkersQuantityTB = new System.Windows.Forms.TextBox();
             this.WorkersQuantityLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CityTB = new System.Windows.Forms.TextBox();
             this.ResultWorkersLB = new System.Windows.Forms.ListBox();
             this.WorkersLB = new System.Windows.Forms.ListBox();
             this.Task2 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ResultStudentsLB = new System.Windows.Forms.ListBox();
             this.StudentsLB = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.Task1.SuspendLayout();
             this.Task2.SuspendLayout();
@@ -55,13 +55,14 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(812, 520);
             this.tabControl.TabIndex = 0;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
             // 
             // Task1
             // 
-            this.Task1.Controls.Add(this.textBox2);
+            this.Task1.Controls.Add(this.WorkersQuantityTB);
             this.Task1.Controls.Add(this.WorkersQuantityLabel);
             this.Task1.Controls.Add(this.label1);
-            this.Task1.Controls.Add(this.textBox1);
+            this.Task1.Controls.Add(this.CityTB);
             this.Task1.Controls.Add(this.ResultWorkersLB);
             this.Task1.Controls.Add(this.WorkersLB);
             this.Task1.Location = new System.Drawing.Point(4, 24);
@@ -72,14 +73,14 @@
             this.Task1.Text = "Task 1";
             this.Task1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // WorkersQuantityTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(37, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(331, 23);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Visible = false;
+            this.WorkersQuantityTB.Location = new System.Drawing.Point(37, 114);
+            this.WorkersQuantityTB.Name = "WorkersQuantityTB";
+            this.WorkersQuantityTB.ReadOnly = true;
+            this.WorkersQuantityTB.Size = new System.Drawing.Size(331, 23);
+            this.WorkersQuantityTB.TabIndex = 5;
+            this.WorkersQuantityTB.Visible = false;
             // 
             // WorkersQuantityLabel
             // 
@@ -100,12 +101,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter a city:";
             // 
-            // textBox1
+            // CityTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 23);
-            this.textBox1.TabIndex = 2;
+            this.CityTB.Location = new System.Drawing.Point(37, 55);
+            this.CityTB.Name = "CityTB";
+            this.CityTB.Size = new System.Drawing.Size(331, 23);
+            this.CityTB.TabIndex = 2;
+            this.CityTB.TextChanged += new System.EventHandler(this.CityTB_TextChanged);
             // 
             // ResultWorkersLB
             // 
@@ -140,6 +142,15 @@
             this.Task2.Text = "Task 2";
             this.Task2.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(419, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Result:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -167,15 +178,6 @@
             this.StudentsLB.Size = new System.Drawing.Size(345, 409);
             this.StudentsLB.TabIndex = 0;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(419, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Result:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,11 +203,11 @@
         private ListBox ResultWorkersLB;
         private ListBox WorkersLB;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox CityTB;
         private ListBox ResultStudentsLB;
         private ListBox StudentsLB;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox WorkersQuantityTB;
         private Label WorkersQuantityLabel;
         private Label label3;
     }

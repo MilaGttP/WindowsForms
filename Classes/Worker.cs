@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsForms
 {
-    public class Workers
+    public class Worker
     {
         public string Surname { get; set; }
         public string Name { get; set; }
@@ -9,15 +9,15 @@ namespace WindowsForms
         public DateOnly Birthday { get; set; }
         public string City { get; set; }
 
-        public Workers ()
+        public Worker ()
         {
             Surname = "Unknown";
             Name = "Unknown";
             Patronymic = "Unknown";
-            Birthday = new DateOnly(0, 0, 0);
+            Birthday = new DateOnly(0001, 1, 1);
             City = "Unknown";
         }
-        public Workers (string surname, string name, string patronymic, DateOnly birthday, string city)
+        public Worker (string surname, string name, string patronymic, DateOnly birthday, string city)
         {
             Surname = surname;
             Name = name;
