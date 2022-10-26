@@ -3,10 +3,7 @@ namespace WindowsForms
 {
     public partial class ChessBoard : Form
     {
-        public ChessBoard()
-        {
-            InitializeComponent();
-        }
+        public ChessBoard() => InitializeComponent();
         private void ChessBoard_Paint(object sender, PaintEventArgs e)
         {
             bool isBlack = false;

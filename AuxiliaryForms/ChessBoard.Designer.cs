@@ -34,13 +34,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 401);
+            this.ClientSize = new System.Drawing.Size(510, 335);
             this.Name = "ChessBoard";
-            this.Text = "Chess Board";
+            this.Text = "ChessBoard";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ChessBoard_Paint);
             this.ResumeLayout(false);
 
         }
+
         #endregion
     }
 }

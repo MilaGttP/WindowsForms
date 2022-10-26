@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessBoard", "ChessBoard.csproj", "{1F429524-983D-46E3-9CD3-33E3717C9433}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryShapes", "..\GeometryShapes\GeometryShapes.csproj", "{37A7594E-F468-4FE9-9C72-10BD465926AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsForms", "WindowsForms.csproj", "{1F429524-983D-46E3-9CD3-33E3717C9433}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{1F429524-983D-46E3-9CD3-33E3717C9433}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F429524-983D-46E3-9CD3-33E3717C9433}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F429524-983D-46E3-9CD3-33E3717C9433}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37A7594E-F468-4FE9-9C72-10BD465926AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37A7594E-F468-4FE9-9C72-10BD465926AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37A7594E-F468-4FE9-9C72-10BD465926AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37A7594E-F468-4FE9-9C72-10BD465926AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
